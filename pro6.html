@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf­8">
+<title> Угадай число </title>
+<style>
+body
+{
+font­size: 20px;
+color:brown;
+}
+b
+{
+color:crimson;
+}
+strong
+{
+color:coral;
+}
+</style>
+</head>
+<body>
+<script>
+var min = 1;
+var max = 100;
+var guessNumber = Math.floor( Math.random() * (max - min + 1)) + min; 
+document.write("Компьютер загадал число от " + min + "до " + max + ".Угадайте его за 7 попыток<br>");
+var userAnswer1;
+var userAnswer2;
+for (tryCount = 1; tryCount < 8; tryCount++)
+{
+userAnswer1= +prompt(tryCount + "попытка.Первый игрок.Ваш вариант: ");
+document.write(tryCount + ".первый игрок" + "." + guessNumber + " ");
+if (userAnswer1 > guessNumber)
+document.write("<b>Перелет</b><br>");
+if (userAnswer1 < guessNumber)
+document.write("<strong>Недолет</strong><br>");
+if (userAnswer1 == guessNumber) 
+{
+document.write("Поздравляем!Вы угадали!<br>");
+break;
+}
+userAnswer2= +prompt(tryCount+"попытка.Второй игрок.Ваш вариант: ");
+document.write(tryCount + ".второй игрок" + "." + guessNumber + " ");
+if (userAnswer2 > guessNumber)
+document.write("<b>Перелет</b><br>");
+if (userAnswer2 < guessNumber)
+document.write("<strong>Недолет</strong><br>");
+if (userAnswer2 == guessNumber) 
+{
+document.write("Поздравляем!Вы угадали!<br>");
+break;
+}
+}
+if (userAnswer1 != guessNumber) document.write("Игрок 1, вы проиграли!Попробуйте еще раз");
+if (userAnswer2 != guessNumber) document.write("Игрок 2, вы проиграли!Попробуйте еще раз");
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿<meta charset ="utf-8">
+<script>
+alert("Какого цвета снег?");
+var answer = prompt();
+if (answer == "белый" || answer == "Белый" || answer == "БЕЛЫЙ" || answer == "белого" || answer == "Белого" || answer == "БЕЛОГО")
+	{
+	alert("Поздравляю!");
+	alert("Игра окончена.");
+	}
+	else
+	{
+	alert("Сколько будет 2 + 2?");
+	var answer2 = prompt();
+	var count = 0;
+		if (answer2 == "4")
+		{
+		count = count + 1;
+		}
+		else
+		{
+		count = count;
+		}
+	alert("Сколько будет 2 + 5?");
+	var answer3 = prompt();
+		if (answer3 == "7")
+		{
+		count = count + 1;
+		}
+		else
+		{
+		count = count;
+		}
+	alert("Сколько будет 3 + 5?");
+	var answer4 = prompt();
+		if (answer4 == "8")
+		{
+		count = count + 1;
+		}
+		else
+		{
+		count = count;
+		}
+	alert("Количество правильных ответов:" + count);
+	}
+</script>
